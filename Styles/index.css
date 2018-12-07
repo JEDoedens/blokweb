@@ -1,67 +1,70 @@
-* {
+/*
+Met deze code kan je een tweede item uit een lijst pakken:
 
-}
+ main article footer ul li:nth-of-type(2){
+  color: blue;
+} */
+* {}
 
-html{
+html {}
 
-}
-
-body{
-background-color: #f2f2f2;
-font-family: 'Source Sans Pro', sans-serif;
-font-weight: 500;
-color: #1a6c9c;
+body {
+  background-color: #f2f2f2;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
+  color: #1a6c9c;
 }
 
 /* 1 */
-header{
-background-color: white;
-
+header {
+  background-color: white;
 }
+
 /* 1 */
-main{
+main {}
 
-}
 /* 1 */
 footer{
 
 }
 
 /* 2 */
-nav{
+nav {
   background-image: url("../images/Wachtenoptrein.jpg");
   background-size: 100%;
 }
 
 /* 2 */
-section{
+section {}
 
-
-}
 /* 2 */
-form{
+form {}
 
-}
 /* 2 */
-article{
-background-color: white;
-width: 80%;
-border-radius: .2em;
-margin: auto;
+article {
+  background-color: white;
+  width: 80%;
+  border-radius: .2em;
+  margin: auto;
+  color: black;
 }
 
 /* 3+ */
-ul{
+ul {
   list-style: none;
-
 }
-button{
-font-weight: 600;
-color: #1a6c9c;
+
+a{
+text-decoration: none;
+}
+
+button {
+  font-weight: 600;
+  color: #1a6c9c;
 }
 
 /* De bovenste drie dingen: opgeslagen, logo en profiel */
-header > ul {
+header>ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -69,16 +72,13 @@ header > ul {
   height: 4em;
 }
 
-header > ul > li > a{
+header>ul>li>a {
   padding: .5em;
-  text-decoration: none;
   color: #ef1a30;
 }
 
-#RET {height: 60%}
-
 /* Alle 99 verhalen, Kiezen door een quiz en Veras mij */
-nav > ul {
+nav>ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -86,37 +86,42 @@ nav > ul {
   height: 12em;
 }
 
-nav > ul > li > a {
-background-color: #51b2e0;
-padding: .5em;
-border-radius: .2em;
-text-decoration: none;
-color: #1a6c9c;
-font-weight: 600;
+nav>ul>li>a {
+  background-color: #d1ebf8;
+  padding: .5em;
+  border-radius: .2em;
+  color: #1a6c9c;
+  font-weight: 600;
+}
+
+/* Alles in de main */
+main > form{
+  color: black;
 }
 
 /* de knoppen (radiobuttons) in het formulier (emotie, leestijd, enz) */
-
-label{
+label {
   padding: 0.5em;
   background-color: #e8e8ea;
   border-radius: .2em;
   font-weight: 600;
 }
 
-input:checked + label{
+/* wanneer je drukt op de knoppen */
+input:checked+label {
   background: white;
   border: solid;
+  color: #1a6c9c;
 }
 
 /* radiobuttons niet zichtbaar */
-input{
+input {
   visibility: hidden;
   position: absolute;
   overflow: hidden;
-
 }
 
+/* dingen in het artikel */
 article header img {
   width: 100%;
   border-radius: .2em .2em 0 0;
@@ -126,6 +131,46 @@ article footer ul li {
   text-transform: uppercase;
 }
 
+article footer ul li span {
+  text-transform: none;
+  color: #1a6c9c;
+}
+
+body > footer {
+  border-top: solid;
+  color: #ef1a30;
+  height: 20%;
+}
+
+body > footer > a{
+  color: #1a6c9c;
+}
+
 p {
   color: black;
+}
+
+/* opmaak van de svg's */
+#RET {
+  height: 60%;
+}
+
+#RETT {
+  height: 40%;
+}
+
+/* Opgeslagen en Profiel wil ik beide pakken hoe doe ik ze in een? */
+#opgeslagen {
+  height: 70%;
+}
+#profiel {
+  height: 70%;
+}
+
+#beoordeling {
+  width: 40%;
+}
+
+#leestijd {
+  width: 20%;
 }
