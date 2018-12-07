@@ -7,9 +7,10 @@ html{
 }
 
 body{
-background-color: #f5f5f6;
+background-color: #f2f2f2;
 font-family: 'Source Sans Pro', sans-serif;
 font-weight: 500;
+color: #1a6c9c;
 }
 
 /* 1 */
@@ -44,6 +45,9 @@ form{
 /* 2 */
 article{
 background-color: white;
+width: 80%;
+border-radius: .2em;
+margin: auto;
 }
 
 /* 3+ */
@@ -52,15 +56,34 @@ ul{
 
 }
 button{
-  font-weight: 600;
+font-weight: 600;
+color: #1a6c9c;
 }
 
+/* De bovenste drie dingen: opgeslagen, logo en profiel */
+header > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 4em;
+}
+
+header > ul > li > a{
+  padding: .5em;
+  text-decoration: none;
+  color: #ef1a30;
+}
+
+#RET {height: 60%}
+
+/* Alle 99 verhalen, Kiezen door een quiz en Veras mij */
 nav > ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-end;
-  height: 10em;
+  height: 12em;
 }
 
 nav > ul > li > a {
@@ -68,5 +91,41 @@ background-color: #51b2e0;
 padding: .5em;
 border-radius: .2em;
 text-decoration: none;
+color: #1a6c9c;
+font-weight: 600;
+}
 
+/* de knoppen (radiobuttons) in het formulier (emotie, leestijd, enz) */
+
+label{
+  padding: 0.5em;
+  background-color: #e8e8ea;
+  border-radius: .2em;
+  font-weight: 600;
+}
+
+input:checked + label{
+  background: white;
+  border: solid;
+}
+
+/* radiobuttons niet zichtbaar */
+input{
+  visibility: hidden;
+  position: absolute;
+  overflow: hidden;
+
+}
+
+article header img {
+  width: 100%;
+  border-radius: .2em .2em 0 0;
+}
+
+article footer ul li {
+  text-transform: uppercase;
+}
+
+p {
+  color: black;
 }
