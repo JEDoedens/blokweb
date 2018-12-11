@@ -17,6 +17,7 @@
 
   <header>
     <!-- De bovenbalk Opgeslagen, Logo en profiel  -->
+    <nav>
     <ul>
       <li><a href=""><svg id="opgeslagen" data-name="opgelsagen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
         <title>Tekengebied 1</title>
@@ -48,6 +49,7 @@
         </g>
       </svg>Profiel</a> </li>
     </ul>
+    </nav>
 
     <nav>
       <!-- De drie knoppen: Alle 99 verhalen, Kiezen door een quiz en Veras mij -->
@@ -60,15 +62,14 @@
   </header>
 
   <main>
-
-    <section>
       <!-- Kop boven het sorteren: De 99 verhalen van RET -->
       <h1>De 99 verhalen van RET</h1>
-    </section>
 
     <form>
-      <h4>Sorteer op:</h4>
+      <fieldset>
+      <legend>Sorteer op:</legend>
       <!-- Alles waar je mee kan sorteren: emotie enz -->
+      <div class="">
       <input type="radio" name="sorteren" value="Emotie" id="Emotie">
       <label for="Emotie">Emotie</label>
 
@@ -80,24 +81,23 @@
 
       <input type="radio" name="sorteren" value="Populariteit" id="Populariteit">
       <label for="Populariteit">Populariteit</label>
+      </div>
+      </fieldset>
     </form>
 
-    <section>
       <h2>
         Aanbevolen
       </h2>
-    </section>
 
     <article class="Voetbalanalisten">
       <!-- Alles in het blok voetbalanalisten -->
       <header>
         <img src="images/Voetbalanalisten.jpg" alt="Voetbalanalisten">
-      </header>
-      <section>
         <h3>
           Voetbalanalisten
         </h3>
-      </section>
+      </header>
+
       <footer>
         <ul>
           <li>Sterren aantal: <svg id="beoordeling" data-name="beoordeling" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 213.28 80">
@@ -126,8 +126,10 @@
 
   <footer>
     <!-- Streep, Tekst De 99 verhalen van RET en Logo -->
-    <a href="web.html">De 99 verhalen van RET</a>
-    <a href="web.html"><svg id="RETT" width="246" height="106" viewBox="0 0 246 106" xmlns="http://www.w3.org/2000/svg">
+    <nav>
+    <ul>
+    <li><a href="web.html">De 99 verhalen van RET</a></li>
+    <li><a class="ruzie" href="web.html"><svg id="RETT" width="246" height="106" viewBox="0 0 246 106" xmlns="http://www.w3.org/2000/svg">
         <title>logo</title>
         <g fill="none" fill-rule="evenodd">
           <path d="M242.08 17H215.73L201.3 84.795h-23.32L192.407 17h-84.974l3.545-17h134.574l-3.47 17z" fill="#D82331" />
@@ -138,7 +140,9 @@
             fill="#FFF" />
         </g>
       </svg>
-    </a>
+    </a></li>
+    </ul>
+    </nav>
   </footer>
 
 </body>

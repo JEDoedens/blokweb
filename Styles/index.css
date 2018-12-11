@@ -4,7 +4,6 @@ Met deze code kan je een tweede item uit een lijst pakken:
  main article footer ul li:nth-of-type(2){
   color: blue;
 } */
-* {}
 
 html {}
 
@@ -13,6 +12,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 500;
   color: #1a6c9c;
+  margin: 0;
 }
 
 /* 1 */
@@ -21,7 +21,9 @@ header {
 }
 
 /* 1 */
-main {}
+main {
+  margin: 0 1em;
+}
 
 /* 1 */
 footer{
@@ -29,16 +31,14 @@ footer{
 }
 
 /* 2 */
-nav {
+header > nav:last-of-type {
   background-image: url("../images/Wachtenoptrein.jpg");
   background-size: 100%;
 }
 
 /* 2 */
-section {}
-
-/* 2 */
-form {}
+form {
+}
 
 /* 2 */
 article {
@@ -63,29 +63,53 @@ button {
   color: #1a6c9c;
 }
 
-/* De bovenste drie dingen: opgeslagen, logo en profiel */
-header>ul {
+fieldset{
+  border: 0;
+  margin: 0;
+}
+
+div{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+h1{
+  border-bottom: 0.1em solid #ef1a30;
+  width: 55%
+}
+
+h3 {
+  border-bottom: 0.1em solid #ef1a30;
+  width: 8em;
+  margin: 1em;
+}
+
+/* De bovenste drie dingen: opgeslagen, logo en profiel */
+
+header nav:first-of-type ul {
+  display: flex;
+  justify-content: space-between;
   align-items: baseline;
   height: 4em;
 }
 
-header>ul>li>a {
+header nav:first-of-type >ul>li>a {
   padding: .5em;
   color: #ef1a30;
 }
 
 /* Alle 99 verhalen, Kiezen door een quiz en Veras mij */
-nav>ul {
+header nav:last-of-type ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-end;
   height: 12em;
+  margin: 1em;
+  padding: 2em 0;
 }
 
-nav>ul>li>a {
+header nav:last-of-type ul li a {
   background-color: #d1ebf8;
   padding: .5em;
   border-radius: .2em;
@@ -96,14 +120,6 @@ nav>ul>li>a {
 /* Alles in de main IK KOM ER NIET UIT om deze goed te krijgen(:not(h4))*/
 main > form {
   color: black;
-  display: flex;
-  justify-content: space-around;
-}
-
-main > form label{
-display: flex;
-justify-content: space-around;
-align-items: center;
 }
 
 /* de knoppen (radiobuttons) in het formulier (emotie, leestijd, enz) */
@@ -114,6 +130,9 @@ label {
   font-weight: 600;
   width: 5em;
   height: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -141,19 +160,25 @@ article footer ul li {
   text-transform: uppercase;
 }
 
+/* Er is hier een span gebruikt omdat het om een stukje gaat uit een element */
 article footer ul li span {
   text-transform: none;
   color: #1a6c9c;
 }
 
-body > footer {
-  border-top: solid;
-  color: #ef1a30;
+body > footer{
+  border-top: 0.1em solid #ef1a30;
   height: 20%;
+  margin: 1em;
 }
 
-body > footer > a{
+body > footer > nav > ul > li> a{
   color: #1a6c9c;
+}
+
+body > footer > nav > ul  {
+    margin: 1em 0 0 0;
+    padding: 0;
 }
 
 p {
