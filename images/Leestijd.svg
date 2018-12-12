@@ -1,7 +1,7 @@
-<svg id="leestijd" data-name="leestijd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-  <title>Tekengebied 3</title>
+<svg id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <title>leestijd</title>
   <g>
-    <circle cx="38.63" cy="39.48" r="19.63" style="fill: none;stroke: #e5222f;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 4px"/>
-    <polyline points="46.92 39.68 38.44 39.68 38.44 25.2" style="fill: none;stroke: #e5222f;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 4px"/>
+    <circle cx="40" cy="40" r="37.8" style="fill: none;stroke: #e5222f;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 4px"/>
+    <polyline points="55.96 40.37 39.63 40.37 39.63 12.5" style="fill: none;stroke: #e5222f;stroke-linecap: round;stroke-miterlimit: 10;stroke-width: 4px"/>
   </g>
 </svg>

@@ -5,51 +5,7 @@ Met deze code kan je een tweede item uit een lijst pakken:
   color: blue;
 } */
 
-html {}
-
-body {
-  background-color: #f2f2f2;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 500;
-  color: #1a6c9c;
-  margin: 0;
-}
-
-/* 1 */
-header {
-  background-color: white;
-}
-
-/* 1 */
-main {
-  margin: 0 1em;
-}
-
-/* 1 */
-footer{
-
-}
-
-/* 2 */
-header > nav:last-of-type {
-  background-image: url("../images/Wachtenoptrein.jpg");
-  background-size: 100%;
-}
-
-/* 2 */
-form {
-}
-
-/* 2 */
-article {
-  background-color: white;
-  width: 80%;
-  border-radius: .2em;
-  margin: auto;
-  color: black;
-}
-
-/* 3+ */
+/* algemene zaken */
 ul {
   list-style: none;
 }
@@ -58,39 +14,46 @@ a{
 text-decoration: none;
 }
 
-button {
-  font-weight: 600;
+p {
+  color: black;
+  font-size: 1em;
+}
+
+em{
+  font-style: normal;
+}
+
+html {
+
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
   color: #1a6c9c;
-}
-
-fieldset{
-  border: 0;
   margin: 0;
+  font-size: 1em;
 }
 
-div{
-  display: flex;
-  justify-content: space-between;
+/* alles in de header*/
+/* 1 */
+header {
+  background-color: white;
 }
 
-h1{
-  border-bottom: 0.1em solid #ef1a30;
-  width: 55%
+/* De bovenste drie dingen: opgeslagen, logo en profiel (1e nav)*/
+header nav:first-of-type {
+  height: 4em;
+  margin: 0;
+  padding: 0.5em 0;
 }
-
-h3 {
-  border-bottom: 0.1em solid #ef1a30;
-  width: 8em;
-  margin: 1em;
-}
-
-/* De bovenste drie dingen: opgeslagen, logo en profiel */
 
 header nav:first-of-type ul {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  height: 4em;
+  margin: 0;
 }
 
 header nav:first-of-type >ul>li>a {
@@ -98,7 +61,12 @@ header nav:first-of-type >ul>li>a {
   color: #ef1a30;
 }
 
-/* Alle 99 verhalen, Kiezen door een quiz en Veras mij */
+/* Alle 99 verhalen, Kiezen door een quiz en Veras mij (2e nav)*/
+header > nav:last-of-type {
+  background-image: url("../images/Wachtenoptrein.jpg");
+  background-size: 100%;
+}
+
 header nav:last-of-type ul {
   display: flex;
   flex-direction: row;
@@ -117,9 +85,45 @@ header nav:last-of-type ul li a {
   font-weight: 600;
 }
 
-/* Alles in de main IK KOM ER NIET UIT om deze goed te krijgen(:not(h4))*/
+/* Alles in de main */
+main {
+  margin: 0 1em;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+/* De 99 verhalen van RET */
+h1{
+  font-weight: 500;
+  font-size: 1.625em;
+  padding-bottom: 0.3em;
+  position: relative;
+
+}
+
+h1:after{
+  content: "";
+  width: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #ef1a30;
+}
+
+/* Alles in het formulier (Sorteer op: emotie, leestijd, enz..) */
 main > form {
   color: black;
+}
+
+fieldset{
+  border: 0;
+  margin: 0;
+}
+
+div{
+  display: flex;
+  justify-content: space-between;
 }
 
 /* de knoppen (radiobuttons) in het formulier (emotie, leestijd, enz) */
@@ -133,7 +137,6 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 /* wanneer je drukt op de knoppen */
@@ -150,20 +153,81 @@ input {
   overflow: hidden;
 }
 
+/* Net onder de form -> AANBEVOLEN */
+h2{
+  font-size: 1.125em;
+  font-weight: 500;
+}
+
+/* Alles in het artikel */
+article {
+  background-color: white;
+  width: 80%;
+  border-radius: .2em;
+  margin: auto;
+  color: #6F6E71;
+}
+
 /* dingen in het artikel */
 article header img {
   width: 100%;
   border-radius: .2em .2em 0 0;
 }
 
-article footer ul li {
-  text-transform: uppercase;
+h3 {
+  margin: 1em;
+  font-weight: 500;
+  font-size: 1.625em;
+  padding-bottom: 0.3em;
+  position: relative;
 }
 
-/* Er is hier een span gebruikt omdat het om een stukje gaat uit een element */
-article footer ul li span {
+h3:after{
+  content: "";
+  width: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #ef1a30;
+}
+
+article footer {
+}
+
+article footer ul {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  flex-direction: row;
+  padding:0 1em;
+}
+article footer ul li {
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items:center;
+}
+
+article footer ul li em {
+  width: 100%;
+
+}
+article footer ul li small {
+  width: 100%;
+  margin-left: .5em;
+  width:50%
+}
+
+/* Er is hier een smal gebruikt omdat het om een stukje gaat uit een element */
+article footer ul li small {
   text-transform: none;
   color: #1a6c9c;
+}
+
+/* 1 */
+body footer{
 }
 
 body > footer{
@@ -179,10 +243,6 @@ body > footer > nav > ul > li> a{
 body > footer > nav > ul  {
     margin: 1em 0 0 0;
     padding: 0;
-}
-
-p {
-  color: black;
 }
 
 /* opmaak van de svg's */
@@ -204,6 +264,7 @@ p {
 #opgeslagen {
   height: 70%;
 }
+
 #profiel {
   height: 70%;
 }
