@@ -5,6 +5,11 @@ Met deze code kan je een tweede item uit een lijst pakken:
   color: blue;
 } */
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 /* algemene zaken */
 ul {
   list-style: none;
@@ -34,6 +39,7 @@ body {
   color: #1a6c9c;
   margin: 0;
   font-size: 1em;
+  width: 100vw;
 }
 
 /* alles in de header*/
@@ -52,13 +58,30 @@ header nav:first-of-type {
 header nav:first-of-type ul {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
   margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-header nav:first-of-type >ul>li>a {
+header nav:first-of-type ul li{
+  width: 30%;
+}
+
+header nav:first-of-type ul li a{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header nav:first-of-type ul li a svg{
+  height: 2.5rem;
+  width: auto;
+}
+
+header nav:first-of-type >ul>li>a p {
   padding: .5em;
   color: #ef1a30;
+  text-align: center;
 }
 
 /* Alle 99 verhalen, Kiezen door een quiz en Veras mij (2e nav)*/
@@ -83,12 +106,13 @@ header nav:last-of-type ul li a {
   border-radius: .2em;
   color: #1a6c9c;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 /* Alles in de main */
 main {
   margin: 0 1em;
-  display:flex;
+  /display:flex;
   flex-direction:column;
   align-items:flex-start;
 }
@@ -114,11 +138,13 @@ h1:after{
 /* Alles in het formulier (Sorteer op: emotie, leestijd, enz..) */
 main > form {
   color: black;
+  width: 100%;
 }
 
 fieldset{
   border: 0;
   margin: 0;
+  padding: 0;
 }
 
 div{
@@ -129,14 +155,23 @@ div{
 /* de knoppen (radiobuttons) in het formulier (emotie, leestijd, enz) */
 label {
   padding: 0.5em;
+  margin: 0.25em;
   background-color: #e8e8ea;
   border-radius: .2em;
   font-weight: 600;
-  width: 5em;
+  width: 4em;
   height: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+label:first-of-type{
+  margin: 0.25em 0.25em 0.25em 0;
+}
+
+label:last-of-type{
+  margin: 0.25em 0 0.25em 0.25em;
 }
 
 /* wanneer je drukt op de knoppen */
@@ -162,20 +197,23 @@ h2{
 /* Alles in het artikel */
 article {
   background-color: white;
-  width: 80%;
+  width: 90%;
   border-radius: .2em;
-  margin: auto;
   color: #6F6E71;
+  margin: 0 auto 1rem auto;
+  max-width: 26em;
+  display: inline-block;
 }
 
 /* dingen in het artikel */
 article header img {
   width: 100%;
   border-radius: .2em .2em 0 0;
+  height: 15rem;
 }
 
 h3 {
-  margin: 1em;
+  margin: 1rem;
   font-weight: 500;
   font-size: 1.625em;
   padding-bottom: 0.3em;
@@ -199,7 +237,7 @@ article footer ul {
   align-items: baseline;
   justify-content: flex-start;
   flex-direction: row;
-  padding:0 1em;
+  padding:0 1em 1em 1em;
 }
 article footer ul li {
   text-transform: uppercase;
@@ -247,12 +285,12 @@ body > footer > nav > ul  {
 
 /* opmaak van de svg's */
 #RET {
-  height: 60%;
+  height: 8vw;
 }
 
 /* Met dit element heb ik ruzie..... daarom heb ik hem nu de class ruzie gegeven dit moet anders */
 #RETT {
-  height: 40%;
+  height: 8vw;
 }
 
 .ruzie {
@@ -261,18 +299,32 @@ body > footer > nav > ul  {
 }
 
 /* Opgeslagen en Profiel wil ik beide pakken hoe doe ik ze in een? */
-#opgeslagen {
-  height: 70%;
-}
-
-#profiel {
-  height: 70%;
-}
 
 #beoordeling {
-  width: 40%;
+  width: 45%;
 }
 
 #leestijd {
-  width: 20%;
+  width: 15%;
+}
+
+/* Wanneer je hovert over PROFIEL veranderen onderdelen aan je svg*/
+a:hover #profiel .cls-1 {
+  background-color: ;
+  stroke: ;
+  fill: ;
+}
+
+@media (min-width: 40em){
+  body {
+    background-color: pink;
+  }
+
+}
+
+@media (min-width: 60em){
+  body {
+    background-color: purple;
+  }
+
 }
