@@ -37,7 +37,6 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 500;
   color: #1a6c9c;
-  margin: 0;
   font-size: 1em;
   width: 100vw;
 }
@@ -51,15 +50,12 @@ header {
 /* De bovenste drie dingen: opgeslagen, logo en profiel (1e nav)*/
 header nav:first-of-type {
   height: 4em;
-  margin: 0;
   padding: 0.5em 0;
 }
 
 header nav:first-of-type ul {
   display: flex;
   justify-content: space-between;
-  margin: 0;
-  padding: 0;
   height: 100%;
 }
 
@@ -143,8 +139,6 @@ main > form {
 
 fieldset{
   border: 0;
-  margin: 0;
-  padding: 0;
 }
 
 div{
@@ -203,6 +197,10 @@ article {
   margin: 0 auto 1rem auto;
   max-width: 26em;
   display: inline-block;
+}
+
+article header {
+  border-radius: 0.2em;
 }
 
 /* dingen in het artikel */
@@ -280,7 +278,6 @@ body > footer > nav > ul > li> a{
 
 body > footer > nav > ul  {
     margin: 1em 0 0 0;
-    padding: 0;
 }
 
 /* opmaak van de svg's */
