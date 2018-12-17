@@ -1,6 +1,8 @@
 /*
-Met deze code kan je een tweede item uit een lijst pakken:
+Het werkt niet maar ze hebben het wel op de RET site wil ik dit?
+cursor: pointer;
 
+Met deze code kan je een tweede item uit een lijst pakken:
  main article footer ul li:nth-of-type(2){
   color: blue;
 } */
@@ -33,7 +35,8 @@ html {
 }
 
 body {
-  background-color: #f2f2f2;
+  line-height: 1.5
+  background: #f5f5f6;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 500;
   color: #1a6c9c;
@@ -66,7 +69,6 @@ header nav:first-of-type ul li{
 header nav:first-of-type ul li a{
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 header nav:first-of-type ul li a svg{
@@ -84,6 +86,9 @@ header nav:first-of-type >ul>li>a p {
 header > nav:last-of-type {
   background-image: url("../images/Wachtenoptrein.jpg");
   background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-around;
 }
 
 header nav:last-of-type ul {
@@ -92,8 +97,11 @@ header nav:last-of-type ul {
   justify-content: space-between;
   align-items: flex-end;
   height: 12em;
-  margin: 1em;
-  padding: 2em 0;
+  margin: 0.5em;
+}
+
+header nav:last-of-type ul li{
+  padding: 0.5em;
 }
 
 header nav:last-of-type ul li a {
@@ -106,35 +114,44 @@ header nav:last-of-type ul li a {
 }
 
 /* Alles in de main */
-main {
-  margin: 0 1em;
-  /display:flex;
-  flex-direction:column;
-  align-items:flex-start;
+/* main:not( h1 form h2){
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+} */
+
+main{
+  display: grid;
+  grid-template-columns: 1rem 1fr 1rem;
 }
 
 /* De 99 verhalen van RET */
 h1{
   font-weight: 500;
   font-size: 1.625em;
-  padding-bottom: 0.3em;
+  padding: 0.3em 0;
   position: relative;
+  grid-column: 2/4;
+
 
 }
 
 h1:after{
   content: "";
-  width: 50%;
+  width: 10rem;
   position: absolute;
   left: 0;
   bottom: 0;
   border-bottom: 3px solid #ef1a30;
+    grid-column: 2/4;
 }
 
 /* Alles in het formulier (Sorteer op: emotie, leestijd, enz..) */
 main > form {
   color: black;
   width: 100%;
+  grid-column: 2/4;
+  max-width: 25rem;
 }
 
 fieldset{
@@ -147,13 +164,17 @@ div{
 }
 
 /* de knoppen (radiobuttons) in het formulier (emotie, leestijd, enz) */
+legend{
+  padding-top: 1em;
+  font-size: 1.125em;
+}
+
 label {
   padding: 0.5em;
   margin: 0.25em;
   background-color: #e8e8ea;
   border-radius: .2em;
   font-weight: 600;
-  width: 4em;
   height: 1em;
   display: flex;
   justify-content: center;
@@ -186,17 +207,19 @@ input {
 h2{
   font-size: 1.125em;
   font-weight: 500;
+  padding-top: 1em;
+  grid-column: 2/4;
 }
 
 /* Alles in het artikel */
 article {
   background-color: white;
-  width: 90%;
   border-radius: .2em;
   color: #6F6E71;
   margin: 0 auto 1rem auto;
   max-width: 26em;
-  display: inline-block;
+  box-shadow: 0 10px 30px 0 rgba(35,31,32,.1);
+  grid-column: 2/3;
 }
 
 article header {
@@ -220,11 +243,11 @@ h3 {
 
 h3:after{
   content: "";
-  width: 50%;
+  width: 6rem;
   position: absolute;
   left: 0;
   bottom: 0;
-  border-bottom: 3px solid #ef1a30;
+  border-bottom: 2px solid #ef1a30;
 }
 
 article footer {
@@ -233,8 +256,6 @@ article footer {
 article footer ul {
   display: flex;
   align-items: baseline;
-  justify-content: flex-start;
-  flex-direction: row;
   padding:0 1em 1em 1em;
 }
 article footer ul li {
@@ -282,12 +303,14 @@ body > footer > nav > ul  {
 
 /* opmaak van de svg's */
 #RET {
-  height: 8vw;
+  height: 2.5rem;
+  width: auto;
 }
 
 /* Met dit element heb ik ruzie..... daarom heb ik hem nu de class ruzie gegeven dit moet anders */
 #RETT {
-  height: 8vw;
+  height: 2.5rem;
+  width: auto;
 }
 
 .ruzie {
@@ -312,16 +335,60 @@ a:hover #profiel .cls-1 {
   fill: ;
 }
 
-@media (min-width: 40em){
-  body {
-    background-color: pink;
+@media (max-width: 40em){
+  header nav:last-of-type ul li a {
+    font-size: 0.75em;
   }
 
+  label{
+    font-size: 0.75em;
+  }
+  main > form{
+    max-width: 20rem;
+  }
+}
+
+@media (min-width: 40em){
+  /* body {
+    background-color: pink;
+} */
+    main {
+      display: grid;
+      grid-template-columns: 1rem 1fr 0.5em 1fr 1rem;
+}
+
+header nav:last-of-type ul {
+  padding: 2em 0;
+}
+
+.mop{
+  grid-column: 4/5;
+}
+
+.Haiku{
+  grid-column: 4/5;
 }
 
 @media (min-width: 60em){
-  body {
+  /* body {
     background-color: purple;
-  }
+  } */
 
+  main{
+    display: grid;
+    grid-template-columns: 1rem 1fr 0.5em 1fr 0.5em 1fr 1rem;
+}
+
+header nav:last-of-type ul {
+  padding: 2em 0;
+}
+
+.regionaaldagblad{
+  grid-column: 6/7;
+}
+
+.Haiku{
+  grid-column: 2/3;
+}
+}
 }
