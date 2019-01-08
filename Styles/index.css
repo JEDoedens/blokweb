@@ -18,6 +18,7 @@ ul {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 p {
@@ -196,6 +197,11 @@ input {
   overflow: hidden;
 }
 
+button{
+  position: absolute;
+  right: -999em;
+}
+
 /* Net onder de form -> AANBEVOLEN */
 h2 {
   font-size: 1.125em;
@@ -293,15 +299,90 @@ body>footer>nav>ul {
 }
 
 /* opmaak van de svg's */
+#opgeslagen g path:first-of-type{
+  /* 1e path  */
+  fill: #e5222f;
+}
+
+#opgeslagen g path:last-of-type{
+fill: none;
+stroke: #fff;
+stroke-miterlimit: 10;
+stroke-width: 3px;
+}
+
 #RET {
   height: 2.5rem;
   width: auto;
 }
 
-/* Met dit element heb ik ruzie..... daarom heb ik hem nu de class ruzie gegeven dit moet anders */
+#RET g path{
+  fill: #D82331;
+}
+
+#profiel g circle{
+  fill: #e5222f;
+}
+
+#profiel g g circle{
+fill: none;
+stroke: #fff;
+stroke-linecap: round;
+stroke-miterlimit: 10;
+stroke-width: 4px;
+}
+
+#profiel g g path{
+fill: none;
+stroke: #fff;
+stroke-linecap: round;
+stroke-miterlimit: 10;
+stroke-width: 4px;
+}
+
+#beoordeling {
+  width: 45%;
+}
+
+#beoordeling g path{
+  fill: #d62135;
+}
+
+#beoordeling g path:last-of-type{
+  fill: #6e6e70;
+}
+
+#leestijd {
+  width: 15%;
+}
+
+#leestijd g circle{
+  fill: none;
+  stroke: #e5222f;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 4px;
+}
+
+#leestijd g polyline{
+  fill: none;
+  stroke: #e5222f;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 4px;
+}
+
 #RETT {
   height: 2.5rem;
   width: auto;
+}
+
+#RETT g path{
+  fill: #D82331;
+}
+
+#RETT g path:last-of-type{
+  fill: #fff;
 }
 
 .ruzie {
@@ -309,20 +390,31 @@ body>footer>nav>ul {
   justify-content: flex-end;
 }
 
-/* Opgeslagen en Profiel wil ik beide pakken hoe doe ik ze in een? */
-#beoordeling {
-  width: 45%;
+/* Proefje met transition op de lijst elementen in de header*/
+header li{
+transition:background-color .5s ease-in;
 }
 
-#leestijd {
-  width: 15%;
+header li:hover{
+  background-color: #6F6E71;
+  border-bottom: 2px black;
 }
 
 /* Wanneer je hovert over PROFIEL veranderen onderdelen aan je svg*/
-a:hover #profiel .cls-1 {
-  background-color: ;
-  stroke: ;
-  fill: ;
+/* Alle stijling van SVG's in CSS ipv html */
+header nav li a:hover svg#RET g path{
+  fill: black;
+  stroke: black;
+}
+
+/* Bezig met stijlen van elementjes */
+/* svg#opgeslagen g path:nth-of-type(2){
+  stroke: pink;
+  fill: pink;
+} */
+
+header nav li a:hover svg#profiel g circle{
+  fill: pink;
 }
 
 /* Hier begint alles met mediaquery's */
@@ -391,5 +483,6 @@ het formulier heeft een maximum breedte*/
     header nav:last-of-type ul {
       padding: 2em 0;
     }
+
   }
 }
