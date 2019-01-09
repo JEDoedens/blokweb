@@ -111,11 +111,6 @@ header nav:last-of-type ul li a {
 }
 
 /* Alles in de main */
-/* main:not( h1 form h2){
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-} */
 main {
   display: grid;
   grid-template-columns: 1fr;
@@ -173,6 +168,8 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: solid;
+  border-color: #e8e8ea;
 }
 
 label:first-of-type {
@@ -181,6 +178,11 @@ label:first-of-type {
 
 label:last-of-type {
   margin: 0.25em 0 0.25em 0.25em;
+}
+
+label:hover {
+  background-color: #d1ebf8;
+  border-color: #d1ebf8;
 }
 
 /* wanneer je drukt op de knoppen */
@@ -298,33 +300,33 @@ body>footer>nav>ul {
   margin: 1em 0 0 0;
 }
 
-/* opmaak van de svg's */
-#opgeslagen g path:first-of-type{
+/* opmaak van de svg's (Alle stijling van SVG's in CSS ipv html) */
+header nav li a #opgeslagen g path:first-of-type{
   /* 1e path  */
   fill: #e5222f;
 }
 
-#opgeslagen g path:last-of-type{
+header nav li a #opgeslagen g path:last-of-type{
 fill: none;
 stroke: #fff;
 stroke-miterlimit: 10;
 stroke-width: 3px;
 }
 
-#RET {
+header nav li a #RET {
   height: 2.5rem;
   width: auto;
 }
 
-#RET g path{
+header nav li a #RET g path{
   fill: #D82331;
 }
 
-#profiel g circle{
+header nav li a #profiel g circle{
   fill: #e5222f;
 }
 
-#profiel g g circle{
+header nav li a #profiel g g circle{
 fill: none;
 stroke: #fff;
 stroke-linecap: round;
@@ -332,7 +334,7 @@ stroke-miterlimit: 10;
 stroke-width: 4px;
 }
 
-#profiel g g path{
+header nav li a #profiel g g path{
 fill: none;
 stroke: #fff;
 stroke-linecap: round;
@@ -391,30 +393,22 @@ stroke-width: 4px;
 }
 
 /* Proefje met transition op de lijst elementen in de header*/
-header li{
+/* header li{
 transition:background-color .5s ease-in;
 }
 
 header li:hover{
   background-color: #6F6E71;
   border-bottom: 2px black;
-}
-
-/* Wanneer je hovert over PROFIEL veranderen onderdelen aan je svg*/
-/* Alle stijling van SVG's in CSS ipv html */
-header nav li a:hover svg#RET g path{
-  fill: black;
-  stroke: black;
-}
-
-/* Bezig met stijlen van elementjes */
-/* svg#opgeslagen g path:nth-of-type(2){
-  stroke: pink;
-  fill: pink;
 } */
 
-header nav li a:hover svg#profiel g circle{
-  fill: pink;
+/* Wanneer je hovert over PROFIEL veranderen onderdelen aan je svg*/
+header nav li a:hover #opgeslagen g path{
+  fill: black;
+}
+
+header nav li a:hover #profiel g circle{
+  fill: black;
 }
 
 /* Hier begint alles met mediaquery's */
