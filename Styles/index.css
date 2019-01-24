@@ -460,6 +460,12 @@ label:hover {
   color: white;
 }
 
+label:focus {
+  background-color: white;
+  border-color: white;
+  color: black;
+}
+
 article:hover {
   margin: -0.1em -0.1em 0.8rem -0.1em;
 }
@@ -497,8 +503,28 @@ header nav li a:hover:last-of-type p{
   color: #BF000F;
 }
 
+header nav li a:focus svg#opgeslagen g path:first-of-type{
+  fill: black;
+}
+
+header nav li a:focus #profiel g circle{
+  fill: black;
+}
+
+header nav li a:focus:first-of-type p{
+  color: black;
+}
+
+header nav li a:focus:last-of-type p{
+  color: black;
+}
+
 header nav li a #RET:hover g path{
   fill: #BF000F;
+}
+
+header nav li a:focus #RET g path{
+  fill: black;
 }
 
 header nav:last-of-type ul li a:hover {
@@ -506,16 +532,33 @@ header nav:last-of-type ul li a:hover {
   color: white;
 }
 
+header nav:last-of-type ul li a:focus {
+  background-color: black;
+  color: white;
+}
+
 body>footer>nav>ul>li>a:hover {
     text-decoration: underline;
+}
+
+body>footer>nav>ul>li>a:focus {
+    color: black;
 }
 
 svg#RETT:hover g path{
   fill: #BF000F;
 }
 
+a:focus svg#RETT g path{
+  fill: black;
+}
+
 body.voetbalanalisten main button:hover{
 background-size: 100%;
+}
+
+body.voetbalanalisten main button:hover svg{
+fill: black;
 }
 
 a svg#duimpje:hover g g g g#content {
@@ -532,7 +575,7 @@ body.voetbalanalisten main button{
   width: 9%;
   height: 9%;
   position: absolute;
-  top: -13em;
+  top: -11em;
   left: 1em;
   display: block;
   background-color: transparent;
@@ -705,7 +748,7 @@ body header.profiel nav:last-of-type{
   }
 
   body.voetbalanalisten main button{
-    top: -10em;
+    top: -8em;
   }
 
 }
@@ -761,6 +804,10 @@ het formulier heeft een maximum breedte*/
   /* Mobiel */
 
   }
+
+  svg#duimpje {
+    width: 15%;
+}
 
 }
 
@@ -854,5 +901,8 @@ het formulier heeft een maximum breedte*/
       display: none;
     }
 
+    svg#duimpje {
+    width: 22%;
+}
   }
 }
