@@ -6,6 +6,7 @@ Met deze code kan je een tweede item uit een lijst pakken:
  main article footer ul li:nth-of-type(2){
   color: blue;
 } */
+
 * {
   margin: 0;
   padding: 0;
@@ -56,7 +57,7 @@ header {
 /* De bovenste drie dingen: opgeslagen, logo en profiel (1e nav)*/
 header nav:first-of-type {
   height: 4em;
-  padding: 0 0 1em 0;
+  padding: 0 0 1.5em 0;
 }
 
 header nav:first-of-type ul {
@@ -202,11 +203,6 @@ label:last-of-type {
   margin: 0.25em 0 0.25em 0.25em;
 }
 
-label:hover {
-  background-color: #d1ebf8;
-  border-color: #d1ebf8;
-}
-
 /* wanneer je drukt op de knoppen */
 input:checked+label {
   background: white;
@@ -239,7 +235,7 @@ article {
   background-color: white;
   border-radius: .2em;
   color: #6F6E71;
-  margin: 0 auto 1rem auto;
+  margin: 0.1em 0.1em 1rem 0.1em;
   max-width: 26em;
   box-shadow: 0 10px 30px 0 rgba(35, 31, 32, .1);
 }
@@ -322,7 +318,9 @@ body>footer>nav>ul {
   margin: 1em 0 0 0;
 }
 
-/* opmaak van de svg's (Alle stijling van SVG's in CSS ipv html) */
+/* svgland opmaak van de svg's (Alle stijling van SVG's in CSS ipv html) */
+/* ---------------------------------------------------------------------------------------------------------- */
+
 header nav li a svg#opgeslagen.knop{
 animation-name: knop;
 animation-duration: 1s;
@@ -340,12 +338,12 @@ stroke-miterlimit: 10;
 stroke-width: 3px;
 }
 
-#Voetbalanalistenopslaan g path:first-of-type{
+svg#Voetbalanalistenopslaan g path:first-of-type{
   /* 1e path  */
   fill: #e5222f;
 }
 
-#Voetbalanalistenopslaan g path:last-of-type{
+svg#Voetbalanalistenopslaan g path:last-of-type{
 fill: none;
 stroke: #fff;
 stroke-miterlimit: 10;
@@ -354,20 +352,20 @@ stroke-width: 3px;
 
 
 
-header nav li a #RET {
+header nav li a svg#RET {
   height: 2.5rem;
   width: auto;
 }
 
-header nav li a #RET g path{
+header nav li a svg#RET g path{
   fill: #D82331;
 }
 
-header nav li a #profiel g circle{
+header nav li a svg#profiel g circle{
   fill: #e5222f;
 }
 
-header nav li a #profiel g g circle{
+header nav li a svg#profiel g g circle{
 fill: none;
 stroke: #fff;
 stroke-linecap: round;
@@ -375,7 +373,7 @@ stroke-miterlimit: 10;
 stroke-width: 4px;
 }
 
-header nav li a #profiel g g path{
+header nav li a svg#profiel g g path{
 fill: none;
 stroke: #fff;
 stroke-linecap: round;
@@ -383,25 +381,25 @@ stroke-miterlimit: 10;
 stroke-width: 4px;
 }
 
-#beoordeling {
+svg#beoordeling {
   width: 45%;
   padding-top: 0.2em;
 }
 
-#beoordeling g path{
+svg#beoordeling g path{
   fill: #d62135;
 }
 
-#beoordeling g path:last-of-type{
+svg#beoordeling g path:last-of-type{
   fill: #6e6e70;
 }
 
-#leestijd {
+svg#leestijd {
   width: 13%;
   padding-top: 0.5em;
 }
 
-#leestijd g circle{
+svg#leestijd g circle{
   fill: none;
   stroke: #e5222f;
   stroke-linecap: round;
@@ -409,7 +407,7 @@ stroke-width: 4px;
   stroke-width: 4px;
 }
 
-#leestijd g polyline{
+svg#leestijd g polyline{
   fill: none;
   stroke: #e5222f;
   stroke-linecap: round;
@@ -417,16 +415,16 @@ stroke-width: 4px;
   stroke-width: 4px;
 }
 
-#RETT {
+svg#RETT {
   height: 2.5rem;
   width: auto;
 }
 
-#RETT g path{
+svg#RETT g path{
   fill: #D82331;
 }
 
-#RETT g path:last-of-type{
+svg#RETT g path:last-of-type{
   fill: #fff;
 }
 
@@ -434,6 +432,9 @@ stroke-width: 4px;
   display: flex;
   justify-content: flex-end;
 }
+
+/* Hover&focusland alles met states en meer wajooo pizzahoek */
+/* ---------------------------------------------------------------------------------------------------------- */
 
 /* Proefje met transition op de lijst elementen in de header*/
 /* header li{
@@ -445,13 +446,68 @@ header li:hover{
   border-bottom: 2px black;
 } */
 
+label:hover {
+  background-color: #6F6E71;
+  border-color: #6F6E71;
+  color: white;
+}
+
+article:hover {
+  margin: -0.1em -0.1em 0.8rem -0.1em;
+}
+
+header nav:first-of-type ul li:first-of-type:hover{
+    border-top: 3px solid #ef1a30;
+}
+
+header nav:first-of-type ul li:last-of-type:hover{
+    border-top: 3px solid #ef1a30;
+}
+
+header nav:first-of-type ul li:first-of-type{
+    border-top: 3px solid white;
+}
+
+header nav:first-of-type ul li:last-of-type{
+    border-top: 3px solid white;
+}
+
 /* Wanneer je hovert over PROFIEL veranderen onderdelen aan je svg*/
-header nav li a:hover #opgeslagen g path{
-  fill: black;
+header nav li a:hover svg#opgeslagen g path:first-of-type{
+  fill: #BF000F;
 }
 
 header nav li a:hover #profiel g circle{
-  fill: black;
+  fill: #BF000F;
+}
+
+header nav li a:hover:first-of-type p{
+  color: #BF000F;
+}
+
+header nav li a:hover:last-of-type p{
+  color: #BF000F;
+}
+
+header nav li a #RET:hover g path{
+  fill: #BF000F;
+}
+
+header nav:last-of-type ul li a:hover {
+  background-color: #1a6c9c;
+  color: white;
+}
+
+body>footer>nav>ul>li>a:hover {
+    text-decoration: underline;
+}
+
+svg#RETT:hover g path{
+  fill: #BF000F;
+}
+
+body.voetbalanalisten main button:hover{
+background-size: 100%;
 }
 
 /* Voor de pagina: Voetbalanalisten */
@@ -460,28 +516,28 @@ body.voetbalanalisten main button{
   background-image: url(../images/Opgeslagenwit.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 8em;
-  width: 6em;
-  height: 10em;
+  background-size: 90%;
+  width: 9%;
+  height: 9%;
   position: absolute;
-  top: 6em;
-  left: 2em;
+  top: -13em;
+  left: 1em;
   display: block;
   background-color: transparent;
   border: 0;
-
 }
+
 body.voetbalanalisten main button.gif{
   background-image: url(../images/Opgeslagen.gif);
   background-size: 10em;
-
 }
+
 body.voetbalanalisten main button.done{
   background-image: url(../images/Opgeslagen.svg);
 
 }
 
-img{
+body.voetbalanalisten img{
   width: 100%;
   padding-top: 0.5em;
 }
@@ -546,12 +602,41 @@ nav.profiel ul li {
     flex-direction: column;
 }
 
+nav.profiel ul li:first-of-type a{
+  padding-top: 3em;
+}
+
+nav.profiel ul li:nth-of-type(2) {
+    padding-top: 3.4em;
+}
+
+nav.profiel ul li:last-of-type a{
+  background-image: url(../images/Volgende.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 2.6em;
+  height: 2.5rem;
+  width: 6em;
+  padding-top: 4.5em;
+  text-align: center;
+  color: black;
+}
+
+nav.profiel ul li:last-of-type a:hover {
+  background-image: url(../images/Slaover.gif);
+  background-size: 8em;
+  color: white;
+}
+main{
+  position: relative;
+}
+
 nav.profiel ul li a p {
   text-align: center;
 }
 
 nav ul li a #Vorige{
-  height: 1.5rem;
+  height: 1.8rem;
   width: auto;
 }
 
@@ -580,23 +665,6 @@ nav ul li svg#Voortgang g g path{
 fill: #6d6d70;
 }
 
-nav ul li a svg#Volgende{
-  height: 1.5rem;
-  width: auto;
-}
-
-nav ul li a svg#Volgende g g g line {
-fill: none;
-stroke: #6e6e70;
-stroke-linecap: round;
-stroke-miterlimit: 10;
-stroke-width: 10px;
-}
-
-nav ul li a svg#Volgende g g g path {
-fill: #6e6e70;
-}
-
 body header.profiel nav:last-of-type{
   display: none;
 }
@@ -610,6 +678,14 @@ body header.profiel nav:last-of-type{
     margin: 0.5em -1em;
   }
 
+  article:hover {
+    margin: 0.3em -1.2em;
+  }
+
+  body.voetbalanalisten main button{
+    top: -10em;
+  }
+
 }
 
 
@@ -619,6 +695,11 @@ het formulier heeft een maximum breedte*/
 @media (max-width: 30em) {
   main section{
     margin: 0 1em;
+  }
+
+  header nav:last-of-type ul {
+      width: 20em;
+      padding-bottom: 1em;
   }
 
   header nav:last-of-type ul li a {
@@ -646,6 +727,19 @@ het formulier heeft een maximum breedte*/
     display: none;
   }
 
+  body.voetbalanalisten img:nth-of-type(1){
+    /* Desktop */
+    display: none;
+  }
+  body.voetbalanalisten img:nth-of-type(2){
+  /* Tablet */
+    display: none;
+  }
+  body.voetbalanalisten img:nth-of-type(3){
+  /* Mobiel */
+
+  }
+
 }
 
 @media (min-width: 30em) {
@@ -670,6 +764,24 @@ het formulier heeft een maximum breedte*/
   header>nav:last-of-type {
     background-position-y: -1.5em;
     }
+
+  body.voetbalanalisten main button{
+    top: -5em;
+  }
+
+  body.voetbalanalisten img:nth-of-type(1){
+    /* Desktop */
+    display: none;
+  }
+  body.voetbalanalisten img:nth-of-type(2){
+  /* Tablet */
+
+  }
+  body.voetbalanalisten img:nth-of-type(3){
+  /* Mobiel */
+    display: none;
+  }
+  }
 
   @media (min-width: 50em) {
   header>nav:last-of-type {
@@ -701,6 +813,23 @@ het formulier heeft een maximum breedte*/
 
     header nav:last-of-type ul {
       padding: 2em 0;
+    }
+
+    body.voetbalanalisten main button{
+      top: -2.5em;
+    }
+
+    body.voetbalanalisten img:nth-of-type(1){
+      /* Desktop */
+    display: block;
+    }
+    body.voetbalanalisten img:nth-of-type(2){
+    /* Tablet */
+      display: none;
+    }
+    body.voetbalanalisten img:nth-of-type(3){
+    /* Mobiel */
+      display: none;
     }
 
   }
